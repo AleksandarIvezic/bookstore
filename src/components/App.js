@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import '../styling/App.css';
 import { Route, Switch } from 'react-router';
+import { Provider } from 'react-redux';
 import Books from './Books';
 import Navbar from './Navbar';
 import Categories from './Categories';
-import { Provider } from 'react-redux'
 import store from '../storeConfig';
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
     <Provider store={store}>
       <Navbar />
       <Switch>
-        <Route path='/books'>
+        <Route path="/books">
           <Books />
         </Route>
-        <Route path='/categories'>
+        <Route path="/categories">
           <Categories />
         </Route>
       </Switch>

@@ -1,9 +1,8 @@
-import { createStore } from 'redux'
-import { reducer } from './redux/books/books'
-const store = createStore (
-  reducer
-)
+import { createStore } from 'redux';
+import { reducer } from './redux/books/books';
 
-console.log(store);
+const store = createStore(
+  reducer,
+);
 
 export default store;

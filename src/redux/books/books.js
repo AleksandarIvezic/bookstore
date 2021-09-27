@@ -12,13 +12,15 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
-      console.log('action-state:', state);
       return {
         ...state,
         books: [...state.books, action.payload.bookState]
       }
     case REMOVE:
-      return state.filter((book) => book.id !== action.payload.id);
+      return {
+        ...state,
+        books: [...state.books.filter((book) => book.id !== action.payload.id)]
+      };
     default: 
       return state;
   }

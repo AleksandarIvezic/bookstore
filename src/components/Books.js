@@ -1,27 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { addBook, removeBook } from '../redux/books/books';
+import { removeBook } from '../redux/books/books';
 import Button from './Button';
 import Form from './Form';
 
 const Books = () => {
   const books = useSelector((state) => state.booksReducer.books);
   const dispatch = useDispatch();
-  const submitBookToStore = () => {
-    const titleInput = document.getElementById('title');
-    const authorInput = document.getElementById('author');
-    const newBook = {
-      id: uuidv4(),
-      title: titleInput.value,
-      author: authorInput.value,
-    };
-    if (newBook.title && newBook.author) {
-      dispatch(addBook(newBook));
-      titleInput.value = '';
-      authorInput.value = '';
-    }
-  };
+
   if (books.length) {
     return (
       <div>
@@ -47,14 +33,14 @@ const Books = () => {
             ))
           }
         </ul>
-        <Form handleSubmit={submitBookToStore} />
+        <Form />
       </div>
     );
   }
   return (
     <>
       <h2> YOU DON&apos;T HAVE ANY BOOKS TO DISPLAY!</h2>
-      <Form handleSubmit={submitBookToStore} />
+      <Form />
     </>
   );
 };

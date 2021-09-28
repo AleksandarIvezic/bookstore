@@ -14,7 +14,7 @@
 
 ## Live demo link
 
-[Demo link](https://aleks-bookstore.netlify.app)
+[Demo link](https://flamboyant-babbage-a7b9c8.netlify.app)
 
 ## Getting Started
 

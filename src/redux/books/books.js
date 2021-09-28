@@ -4,7 +4,7 @@ const REMOVE = 'bookstore/books/REMOVE';
 
 // Initial state
 const initialState = {
-  books: [{ title: 'Book 1', id: 0, category: 'Sci-fi' }],
+  books: [],
 };
 
 // Reducer
@@ -26,14 +26,14 @@ const booksReducer = (state = initialState, action) => {
 };
 
 // Action Creators
-const addBook = (book) => ({
+const addBook = (payload) => ({
   type: ADD,
-  payload: book,
+  payload,
 });
 
-const removeBook = (book) => ({
+const removeBook = (payload) => ({
   type: REMOVE,
-  payload: book,
+  payload,
 });
 
 export { booksReducer, addBook, removeBook };

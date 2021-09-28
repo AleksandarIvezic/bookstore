@@ -1,13 +1,10 @@
-// Actions
 const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
 
-// Initial state
 const initialState = {
   books: [],
 };
 
-// Reducer
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
@@ -25,7 +22,6 @@ const booksReducer = (state = initialState, action) => {
   }
 };
 
-// Action Creators
 const addBook = (payload) => ({
   type: ADD,
   payload,

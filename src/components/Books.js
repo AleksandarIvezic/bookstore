@@ -21,7 +21,7 @@ const Books = () => {
       authorInput.value = '';
     }
   };
-  if (books) {
+  if (books.length) {
     return (
       <div>
         <ul>
@@ -58,7 +58,7 @@ const Books = () => {
   return (
     <>
       <h2> YOU DON&apos;T HAVE ANY BOOKS TO DISPLAY!</h2>
-      <Form />
+      <Form handleSubmit={submitBookToStore} />
     </>
   );
 };

@@ -1,12 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/books/books';
-import Button from './Button';
+import { useSelector } from 'react-redux';
+import Book from './Book';
 import Form from './Form';
 
 const Books = () => {
   const books = useSelector((state) => state.booksReducer.books);
-  const dispatch = useDispatch();
 
   if (books.length) {
     return (
@@ -14,22 +12,7 @@ const Books = () => {
         <ul>
           {
             books.map((book) => (
-              <li
-                key={book.id}
-              >
-                Book title:
-                {' '}
-                {book.title}
-                {' '}
-                -
-                Author:
-                {' '}
-                {book.author}
-                {' '}
-                -
-                {' '}
-                <Button handleSubmit={() => dispatch(removeBook(book))} buttonName="Remove book" />
-              </li>
+              <Book bookTitle={book.title} bookAuthor={book.author} key={book.id} />
             ))
           }
         </ul>

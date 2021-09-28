@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, removeBook } from '../redux/books/books';
+import Button from './Button';
 import Form from './Form';
 
 const Books = () => {
@@ -41,12 +42,7 @@ const Books = () => {
                 {' '}
                 -
                 {' '}
-                <button
-                  type="button"
-                  onClick={() => dispatch(removeBook(book))}
-                >
-                  Remove book
-                </button>
+                <Button handleSubmit={() => dispatch(removeBook(book))} buttonName="Remove book" />
               </li>
             ))
           }

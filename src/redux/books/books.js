@@ -1,5 +1,8 @@
+import getBooks from '../../helpers/getBooks';
+
 const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
+const LOAD = 'bookstore/books/LOAD';
 
 const initialState = {
   books: [],
@@ -17,6 +20,10 @@ const booksReducer = (state = initialState, action) => {
         ...state,
         books: [...state.books.filter((book) => book.id !== action.payload.id)],
       };
+    case LOAD:
+      return {
+        books: action.payload,
+      };
     default:
       return state;
   }
@@ -32,4 +39,18 @@ const removeBook = (payload) => ({
   payload,
 });
 
-export { booksReducer, addBook, removeBook };
+const loadBooks = (payload) => ({
+  type: LOAD,
+  payload,
+});
+
+const loadBooksThunk = () => async (dispatch) => {
+  const books = await getBooks();
+  if (books) {
+    dispatch(loadBooks(books));
+  }
+};
+
+export {
+  booksReducer, addBook, removeBook, loadBooksThunk,
+};

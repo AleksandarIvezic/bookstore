@@ -13,7 +13,7 @@ const postBook = async (item_id, title, category) => {
       },
       body: JSON.stringify(data),
     });
-    const result = await request.JSON();
+    const result = await request.json();
     return result;
   } catch (err) {
     return err;

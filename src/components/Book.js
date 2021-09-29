@@ -4,14 +4,14 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 import Button from './Button';
 
-const Book = ({ bookTitle, bookAuthor, key }) => {
+const Book = ({ bookTitle, bookCategory, key }) => {
   const dispatch = useDispatch();
   return (
     <li key={key}>
       Book title:
       {bookTitle}
-      - Author:
-      {bookAuthor}
+      - Category:
+      {bookCategory}
       -
       {' '}
       <Button
@@ -24,7 +24,7 @@ const Book = ({ bookTitle, bookAuthor, key }) => {
 
 Book.propTypes = {
   bookTitle: PropTypes.string.isRequired,
-  bookAuthor: PropTypes.string.isRequired,
+  bookCategory: PropTypes.string.isRequired,
   key: PropTypes.number.isRequired,
 };
 

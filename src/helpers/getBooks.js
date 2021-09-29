@@ -15,10 +15,4 @@ const getBooks = async () => {
   }
 };
 
-const showBooks = async () => {
-  const data = await getBooks();
-  console.log('data', data);
-};
-
-showBooks();
 export default getBooks;

@@ -1,7 +1,6 @@
-// eslint-disable-next-line camelcase
-const postBook = async (item_id, title, category) => {
+const postBook = async (itemId, title, category) => {
   const data = {
-    item_id,
+    item_id: itemId,
     title,
     category,
   };

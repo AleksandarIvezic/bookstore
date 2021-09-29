@@ -11,9 +11,9 @@ const Book = ({ bookTitle, bookCategory, id }) => {
     <li>
       Book title:
       {bookTitle}
+      {' '}
       - Category:
       {bookCategory}
-      -
       {' '}
       <Button
         handleSubmit={() => {

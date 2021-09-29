@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import Button from './Button';
 import { addBook } from '../redux/books/books';
+import postBook from '../helpers/postBook';
 
 const Form = () => {
   const titleInput = document.getElementById('title');
@@ -24,6 +25,7 @@ const Form = () => {
         id: uuidv4(),
       }));
       dispatch(addBook(book));
+      postBook(book.id, book.title, book.category);
       titleInput.value = '';
       categoryInput.value = '';
     }

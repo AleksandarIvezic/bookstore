@@ -18,7 +18,12 @@ const Books = () => {
         <ul>
           {
             books.map((book) => (
-              <Book bookTitle={book.title} bookCategory={book.category} key={book.id} />
+              <Book
+                bookTitle={book.title}
+                bookCategory={book.category}
+                key={book.id}
+                id={book.id}
+              />
             ))
           }
         </ul>

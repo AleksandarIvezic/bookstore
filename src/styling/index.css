@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
 }
 nav {
   font-family: 'Montserrat', sans-serif;

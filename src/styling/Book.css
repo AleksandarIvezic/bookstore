@@ -1,0 +1,159 @@
+.book {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category {
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.book-links {
+  display: flex;
+  width: 15rem;
+  justify-content: space-between;
+}
+
+.border {
+  content:'';
+  height: 100%;
+  border-left: 1px solid #e8e8e8;
+}
+
+.book-link {
+  font-weight: lighter;
+  font-size: 0.875rem;
+  color: #4386bf;
+  margin: 5px 0;
+}
+
+.remove-link {
+  font-weight: lighter;
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  background: transparent;
+  color: #4386bf;
+}
+
+.remove-link:hover {
+  cursor: pointer;
+  color: #55adfa;
+}
+
+.completed {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+
+
+.progress-img {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  border-color: #4386bf #4386bf #4386bf #E8E8E8;
+  border-style: solid;
+  border-width: 5px;
+  transform: rotate(45deg);
+}
+
+.progress-percent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.no-margin {
+  margin:0;
+}
+
+.grey-text {
+  color: #a4a4a4;
+  font-size: 0.875rem;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.update-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 11.5rem;
+}
+
+.update-btn {
+  font-family: 'Roboto Slab', serif;
+  margin-top: 15px;
+  border-radius: 3px;
+  background-color: #4386bf;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.813rem;
+  font-weight: lighter;
+  max-width: 11.5rem;
+}
+
+.update-btn:hover {
+  cursor: pointer;
+}
+
+.chapter {
+  font-weight: lighter;
+  margin: 5px 0;
+}
+
+
+.short-border {
+  height: 50%;
+  margin: auto;
+}
+
+
+@media (min-width: 768px) {
+  .book {
+    flex-direction: row;
+    height: 10.625rem;
+  }
+
+  .progress {
+    display: flex;
+    justify-content: space-between;
+    min-width: 650px;
+  }
+
+  .update-progress {
+    min-width: 50%;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+  }
+
+  
+
+  h2,
+  p {
+    margin: 0;
+  }
+}

@@ -1,6 +1,7 @@
 nav {
   padding: 20px 0;
   border-bottom: #e8e8e8 solid 1px;
+  background-color:#fff;
 }
 .navbar{
   display: flex;

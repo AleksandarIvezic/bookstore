@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { loadBooksThunk } from '../redux/books/books';
 import Book from './Book';
 import Form from './Form';
+import '../styling/Books.css';
 
 const Books = () => {
   const books = useSelector((state) => state.booksReducer.books);
@@ -14,8 +15,8 @@ const Books = () => {
 
   if (books.length) {
     return (
-      <div>
-        <ul>
+      <div className="books">
+        <ul className="books-list">
           {
             books.map((book) => (
               <Book

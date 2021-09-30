@@ -11,7 +11,7 @@ const Books = () => {
 
   useEffect(() => {
     dispatch(loadBooksThunk());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="books">

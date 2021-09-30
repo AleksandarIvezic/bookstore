@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { loadBooksThunk } from '../redux/books/books';
 import Book from './Book';
 import Form from './Form';
+import '../styling/Books.css';
 
 const Books = () => {
   const books = useSelector((state) => state.booksReducer.books);
@@ -10,32 +11,25 @@ const Books = () => {
 
   useEffect(() => {
     dispatch(loadBooksThunk());
-  }, []);
+  }, [dispatch]);
 
-  if (books.length) {
-    return (
-      <div>
-        <ul>
-          {
-            books.map((book) => (
-              <Book
-                bookTitle={book.title}
-                bookCategory={book.category}
-                key={book.id}
-                id={book.id}
-              />
-            ))
-          }
-        </ul>
-        <Form />
-      </div>
-    );
-  }
   return (
-    <>
-      <h2> YOU DON&apos;T HAVE ANY BOOKS TO DISPLAY!</h2>
+    <div className="books">
+      <ul className="books-list">
+        {
+          books.map((book) => (
+            <Book
+              bookTitle={book.title}
+              bookCategory={book.category}
+              key={book.id}
+              id={book.id}
+            />
+          ))
+        }
+      </ul>
+      <hr />
       <Form />
-    </>
+    </div>
   );
 };
 

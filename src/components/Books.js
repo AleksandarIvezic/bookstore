@@ -13,31 +13,23 @@ const Books = () => {
     dispatch(loadBooksThunk());
   }, []);
 
-  if (books.length) {
-    return (
-      <div className="books">
-        <ul className="books-list">
-          {
-            books.map((book) => (
-              <Book
-                bookTitle={book.title}
-                bookCategory={book.category}
-                key={book.id}
-                id={book.id}
-              />
-            ))
-          }
-        </ul>
-        <hr />
-        <Form />
-      </div>
-    );
-  }
   return (
-    <>
-      <h2> YOU DON&apos;T HAVE ANY BOOKS TO DISPLAY!</h2>
+    <div className="books">
+      <ul className="books-list">
+        {
+          books.map((book) => (
+            <Book
+              bookTitle={book.title}
+              bookCategory={book.category}
+              key={book.id}
+              id={book.id}
+            />
+          ))
+        }
+      </ul>
+      <hr />
       <Form />
-    </>
+    </div>
   );
 };
 

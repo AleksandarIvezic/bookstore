@@ -1,9 +1,10 @@
 nav {
   padding: 20px 0;
   border-bottom: #e8e8e8 solid 1px;
-  background-color:#fff;
+  background-color: #fff;
 }
-.navbar{
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,10 +21,6 @@ ul {
   list-style: none;
 }
 
-a {
-  color: blue;
-}
-
 .link {
   text-decoration: none;
   font-size: 0.813rem;
@@ -36,11 +33,10 @@ a {
   color: #121212;
 }
 
-
 h1 {
   display: inline;
   margin: 0;
-  color:#0290ff;
+  color: #0290ff;
   font-size: 1.875rem;
 }
 
@@ -54,4 +50,3 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-

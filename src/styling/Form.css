@@ -4,6 +4,7 @@ form {
   color: #888;
   letter-spacing: -0.18px;
 }
+
 h3 {
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -47,4 +48,5 @@ h3 {
 
 .form-input::placeholder {
   color: #c4c4c4;
+  letter-spacing: -0.15px;
 }

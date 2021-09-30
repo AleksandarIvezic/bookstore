@@ -28,6 +28,7 @@ const Books = () => {
             ))
           }
         </ul>
+        <hr />
         <Form />
       </div>
     );
